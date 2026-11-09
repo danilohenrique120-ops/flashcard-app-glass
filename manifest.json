@@ -1,0 +1,17 @@
+{
+  "name": "Lexis Glass — Flashcards de Idiomas",
+  "short_name": "Lexis Glass",
+  "description": "Flashcards com repetição espaçada compacta e vocabulário essencial baseado em especialistas em aquisição de idiomas.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231e1b4b'/><circle cx='35' cy='35' r='22' fill='%2338bdf8' opacity='0.8'/><circle cx='65' cy='60' r='26' fill='%23c084fc' opacity='0.75'/><text x='50' y='64' font-family='sans-serif' font-size='44' font-weight='bold' fill='white' text-anchor='middle'>L</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
