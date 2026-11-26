@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lexis-glass-v2';
+const CACHE_NAME = 'lexis-glass-v3';
 const ASSETS = [
   './',
   './index.html',

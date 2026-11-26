@@ -530,6 +530,68 @@ html, body {
   overflow-wrap: anywhere;
 }
 
+.front-example-box {
+  width: 100%;
+  padding: 9px 11px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.front-example-box.is-hidden-card {
+  display: none;
+}
+
+.front-example-box.is-collapsed {
+  padding: 6px 10px;
+}
+
+.front-example-box.is-collapsed .front-example-text,
+.front-example-box.is-collapsed #btnSpeakFrontExample {
+  display: none;
+}
+
+.front-example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.front-example-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-mini-glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text-secondary);
+  border-radius: var(--radius-pill);
+  padding: 2px 8px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.btn-mini-glass:active {
+  transform: scale(0.95);
+}
+
+.front-example-text {
+  font-size: clamp(0.8rem, 3.3vw, 0.9rem);
+  font-weight: 500;
+  line-height: 1.38;
+  color: #e2e8f0;
+  font-style: italic;
+  overflow-wrap: anywhere;
+}
+
 .btn-audio {
   margin-top: 4px;
   display: inline-flex;

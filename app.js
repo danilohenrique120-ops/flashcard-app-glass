@@ -26,6 +26,7 @@ const state = {
   continuousMode: false,
   currentCardId: null,
   isFlipped: false,
+  showFrontExample: true,
   customCards: { en: [], es: [] },
   srsData: {} // cardId -> { step: 0, dueAt: 0, reviews: 0, updatedAt: 0 }
 };
@@ -47,6 +48,7 @@ function loadState() {
     const saved = JSON.parse(raw);
     state.currentLang = saved.currentLang || 'en';
     state.maxCapDays = saved.maxCapDays || 3;
+    state.showFrontExample = saved.showFrontExample !== undefined ? Boolean(saved.showFrontExample) : true;
     state.customCards = saved.customCards || { en: [], es: [] };
     state.srsData = saved.srsData || {};
     state.updatedAt = saved.updatedAt || Date.now();
@@ -67,6 +69,7 @@ function getSerializablePayload() {
   return {
     currentLang: state.currentLang,
     maxCapDays: state.maxCapDays,
+    showFrontExample: state.showFrontExample,
     reviewedToday: state.reviewedToday,
     lastReviewDate: state.lastReviewDate,
     updatedAt: state.updatedAt,
@@ -421,6 +424,19 @@ function renderCurrentCard() {
   document.getElementById('cardLangBadge').textContent = `${deck.flag} ${deck.nativeName}`;
   document.getElementById('cardFrontText').textContent = card.front;
   document.getElementById('cardPhonetic').textContent = card.phonetic || '';
+
+  // Exemplo em contexto na frente do cartão (com opção de mostrar/ocultar)
+  const frontExBox = document.getElementById('frontExampleBox');
+  const frontExText = document.getElementById('cardFrontExample');
+  const btnToggleEx = document.getElementById('btnToggleFrontExample');
+  const hasDistinctExample = Boolean(card.example && card.example.trim() !== card.front.trim());
+  if (frontExBox && frontExText && btnToggleEx) {
+    frontExBox.classList.toggle('is-hidden-card', !hasDistinctExample);
+    frontExBox.classList.toggle('is-collapsed', !state.showFrontExample);
+    frontExText.textContent = card.example || '';
+    btnToggleEx.textContent = state.showFrontExample ? 'Ocultar' : 'Mostrar';
+  }
+
   document.getElementById('cardStepBadge').textContent =
     srs.reviews === 0 ? 'Novo • 1ª vez' : `Ciclo ${srs.step} • ${srs.reviews}x revisto`;
 
@@ -566,6 +582,25 @@ function initEvents() {
     const cards = getAllCardsForLang(state.currentLang);
     const card = cards.find((c) => c.id === state.currentCardId);
     if (card) speakText(card.front);
+  });
+
+  document.getElementById('btnSpeakFrontExample').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const cards = getAllCardsForLang(state.currentLang);
+    const card = cards.find((c) => c.id === state.currentCardId);
+    if (card && card.example) speakText(card.example);
+  });
+
+  document.getElementById('btnToggleFrontExample').addEventListener('click', (e) => {
+    e.stopPropagation();
+    state.showFrontExample = !state.showFrontExample;
+    const frontExBox = document.getElementById('frontExampleBox');
+    const btnToggleEx = document.getElementById('btnToggleFrontExample');
+    if (frontExBox && btnToggleEx) {
+      frontExBox.classList.toggle('is-collapsed', !state.showFrontExample);
+      btnToggleEx.textContent = state.showFrontExample ? 'Ocultar' : 'Mostrar';
+    }
+    saveState();
   });
 
   document.getElementById('btnSpeakExample').addEventListener('click', (e) => {
