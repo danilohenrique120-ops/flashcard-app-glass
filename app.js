@@ -587,6 +587,18 @@ function initEvents() {
       const lang = btn.getAttribute('data-lang');
       state.currentLang = lang;
       state.currentCardId = null;
+
+      // Se a categoria ativa não tiver cartões no idioma escolhido, volta para "all"
+      const hasCatCards =
+        state.selectedCategory === 'all' ||
+        getAllCardsForLang(lang).some((c) => c.category === state.selectedCategory);
+      if (!hasCatCards) {
+        state.selectedCategory = 'all';
+        document.querySelectorAll('.cat-pill').forEach((p) =>
+          p.classList.toggle('active', p.getAttribute('data-cat') === 'all')
+        );
+      }
+
       document.querySelectorAll('.lang-btn').forEach((b) => b.classList.toggle('active', b === btn));
       updateThemeAccent();
       saveState();

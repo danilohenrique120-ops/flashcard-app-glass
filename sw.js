@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lexis-glass-v1';
+const CACHE_NAME = 'lexis-glass-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -24,8 +24,17 @@ self.addEventListener('activate', (e) => {
   self.clients.claim();
 });
 
+// Network-first para garantir que atualizações de layout e novos cartões apareçam imediatamente
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then((res) => res || fetch(e.request))
+    fetch(e.request)
+      .then((res) => {
+        if (res && res.status === 200 && e.request.method === 'GET') {
+          const copy = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, copy));
+        }
+        return res;
+      })
+      .catch(() => caches.match(e.request))
   );
 });

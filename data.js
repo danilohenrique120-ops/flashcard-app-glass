@@ -217,6 +217,118 @@ const INITIAL_DECKS = {
         example: 'I already ate before coming here.',
         exampleTranslation: 'Eu já comi antes de vir para cá.',
         tip: 'Conectores temporais de altíssima frequência que unem frases simples em ideias completas.'
+      },
+
+      // MÓDULO 5: Trabalho & Rotina (Vocabulário Profissional & Dia a Dia)
+      {
+        id: 'en-19',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Take over a shift',
+        phonetic: '/teɪk ˈoʊvər ə ʃɪft/',
+        back: 'Assumir um turno',
+        example: 'I grab a coffee before I take over the shift.',
+        exampleTranslation: 'Eu pego um café antes de assumir o turno.',
+        tip: '"Take over" significa assumir o controle ou a responsabilidade no lugar de outra pessoa (ex.: troca de turno).'
+      },
+      {
+        id: 'en-20',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Run smoothly',
+        phonetic: '/rʌn ˈsmuðli/',
+        back: 'Rodar sem problemas / fluir bem',
+        example: 'Everything is running smoothly.',
+        exampleTranslation: 'Tudo está rodando sem problemas / fluindo bem.',
+        tip: 'Muito usado para operações, máquinas, projetos e turnos. No presente contínuo: "is running smoothly".'
+      },
+      {
+        id: 'en-21',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Keep an eye on',
+        phonetic: '/kip æn aɪ ɑn/',
+        back: 'Ficar de olho em',
+        example: 'Keep an eye on the contractors.',
+        exampleTranslation: 'Fique de olho nos terceirizados / contratados.',
+        tip: 'Atenção: sempre use "on" — nunca coloque "in" depois! ("Keep an eye ON something/someone").'
+      },
+      {
+        id: 'en-22',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'On schedule',
+        phonetic: '/ɑn ˈskɛdʒul/',
+        back: 'Dentro do cronograma / no prazo',
+        example: 'Our production plan is on schedule.',
+        exampleTranslation: 'Nosso plano de produção está dentro do cronograma.',
+        tip: 'Compare: "on schedule" (no prazo), "ahead of schedule" (adiantado) e "behind schedule" (atrasado).'
+      },
+      {
+        id: 'en-23',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Grab a coffee / a quick bite',
+        phonetic: '/ɡræb ə ˈkɔfi/ • /ə kwɪk baɪt/',
+        back: 'Pegar um café rápido / fazer um lanche rápido',
+        example: "Let's grab a coffee or a quick bite before the meeting.",
+        exampleTranslation: 'Vamos pegar um café ou fazer um lanche rápido antes da reunião.',
+        tip: '"Grab" é muito mais natural e informal do que "take" ou "buy" para comida e bebida rápidas no dia a dia.'
+      },
+      {
+        id: 'en-24',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Head out',
+        phonetic: '/hɛd aʊt/',
+        back: 'Sair / partir',
+        example: 'I usually head out at 5 PM.',
+        exampleTranslation: 'Eu geralmente saio às 17h.',
+        tip: 'Phrasal verb muito usado por nativos no fim do expediente ou ao sair de um lugar ("I\'m going to head out now").'
+      },
+      {
+        id: 'en-25',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Thermal insulation',
+        phonetic: '/ˈθɜrməl ˌɪnsəˈleɪʃən/',
+        back: 'Isolamento térmico',
+        example: "We're installing thermal insulation on the pipelines.",
+        exampleTranslation: 'Estamos instalando isolamento térmico nas tubulações.',
+        tip: 'Atenção: "insulation" é isolamento físico (térmico/elétrico/acústico); "isolation" é isolamento social ou de área.'
+      },
+      {
+        id: 'en-26',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Year-end maintenance shutdown',
+        phonetic: '/jɪr-ɛnd ˈmeɪntənəns ˈʃʌtˌdaʊn/',
+        back: 'Parada de manutenção de fim de ano',
+        example: 'We are preparing the team for the year-end maintenance shutdown.',
+        exampleTranslation: 'Estamos preparando a equipe para a parada de manutenção de fim de ano.',
+        tip: 'Em inglês, os modificadores vêm antes do substantivo principal ("shutdown" = parada programada de planta/equipamento).'
+      },
+      {
+        id: 'en-27',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'Break room / Vending machine',
+        phonetic: '/breɪk rum/ • /ˈvɛndɪŋ məˈʃin/',
+        back: 'Copa (sala de café) / Máquina automática de lanches',
+        example: "I'll meet you in the break room by the vending machine.",
+        exampleTranslation: 'Te encontro na copa, perto da máquina de lanches.',
+        tip: '"Break room" é a sala de descanso/café no trabalho; "vending machine" é a máquina automática de lanches/bebidas.'
+      },
+      {
+        id: 'en-28',
+        category: 'Trabalho & Rotina',
+        theorist: 'Vocabulário Aplicado',
+        front: 'It will continue tomorrow',
+        phonetic: '/ɪt wɪl kənˈtɪnju təˈmɑroʊ/',
+        back: 'Vai continuar amanhã',
+        example: 'The inspection stopped for today, but it will continue tomorrow.',
+        exampleTranslation: 'A inspeção parou por hoje, mas vai continuar amanhã.',
+        tip: 'Atenção: nunca use "be" depois de "will" antes de um verbo principal! Diga "It will continue" (sem "be").'
       }
     ]
   },
